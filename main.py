@@ -5,14 +5,14 @@ from bs4 import BeautifulSoup
 
 def get_page_info(url):
     """
-    Returnează titlul și descrierea unei pagini HTML pentru URL-ul dat.
+    Returneaza titlul si descrierea unei pagini HTML pentru URL-ul dat
 
     Args:
     - url (str): URL-ul paginii web
 
     Returns:
     - title (str): Titlul paginii HTML
-    - description (str): Descrierea din meta tagul "description"
+    - description (str): Descrierea din meta tag-ul "description"
     """
     try:
         response = requests.get(url)

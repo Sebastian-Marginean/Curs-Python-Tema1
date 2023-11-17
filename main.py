@@ -1,7 +1,19 @@
+# file: get_page_info.py
+
 import requests
 from bs4 import BeautifulSoup
 
 def get_page_info(url):
+    """
+    Returnează titlul și descrierea unei pagini HTML pentru URL-ul dat.
+
+    Args:
+    - url (str): URL-ul paginii web
+
+    Returns:
+    - title (str): Titlul paginii HTML
+    - description (str): Descrierea din meta tagul "description"
+    """
     try:
         response = requests.get(url)
         soup = BeautifulSoup(response.content, 'html.parser')
